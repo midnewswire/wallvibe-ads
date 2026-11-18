@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.library' version '7.3.1'
+}
+
+android {
+    namespace 'com.wallvibe.ads'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 19
+        targetSdk 33
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // AdMob
+    api 'com.google.android.gms:play-services-ads:23.2.0'
+    // Google User Messaging Platform - GDPR/consent, used by GDPR.java
+    api 'com.google.android.ump:user-messaging-platform:2.2.0'
+    // Meta Audience Network (FAN)
+    api 'com.facebook.android:audience-network-sdk:6.17.0'
+    // Unity Ads
+    api 'com.unity3d.ads:unity-ads:4.12.2'
+    // ironSource (needs the android-sdk.is.com maven repo, declared in settings.gradle)
+    api 'com.ironsource.sdk:mediationsdk:8.3.0'
+    // AppLovin
+    api 'com.applovin:applovin-sdk:12.6.1'
+
+    implementation 'androidx.annotation:annotation:1.6.0'
+}

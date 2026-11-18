@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // ironSource's own maven repo, needed for com.ironsource.sdk:mediationsdk
+        maven { url 'https://android-sdk.is.com/' }
+    }
+}
+rootProject.name = "wallvibe-ads"
