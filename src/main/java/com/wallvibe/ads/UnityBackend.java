@@ -42,6 +42,10 @@ final class UnityBackend {
             }
 
             @Override
+            public void onBannerShown(BannerView bannerAdView) {
+            }
+
+            @Override
             public void onBannerFailedToLoad(BannerView bannerAdView, BannerErrorInfo errorInfo) {
                 if (listener != null) listener.onAdFailedToLoad(errorInfo.errorMessage);
             }
